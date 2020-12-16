@@ -2,9 +2,23 @@
 import "bootstrap";
 import "./style.css";
 
-import "./assets/img/rigo-baby.jpg";
-import "./assets/img/4geeks.ico";
-
+// Generador de palo aleatorio
 window.onload = function() {
-  console.log("Hello Rigo from the console!");
+  document.querySelector("#btn").addEventListener("click", () => {
+    let result = generateSimbol();
+    document.querySelector("#simbol1").innerHTML = result;
+    document.querySelector("#simbol2").innerHTML = result;
+    document.querySelector("#number").innerHTML = generateNumber();
+  });
 };
+
+function generateSimbol() {
+  let palo = ["&clubs;", "&spades;", "&hearts;", "&diams;"];
+  let paloIndx = Math.floor(Math.random() * palo.length);
+  return palo[paloIndx];
+}
+// //Generador de numeros aleatorios
+function generateNumber() {
+  let number = Math.floor(Math.random() * 13);
+  return number;
+}
