@@ -6,7 +6,6 @@ import "./style.css";
 window.onload = function() {
   document.querySelector("#btn").addEventListener("click", () => {
     let result = generateSimbol();
-    //document.querySelector("#simbol1").style.color = "red";
     document.querySelector("#simbol1").innerHTML = result.paloSelect;
     document.querySelector("#simbol1").style.color = result.color;
     document.querySelector("#simbol2").innerHTML = result.paloSelect;
